@@ -1,0 +1,53 @@
+.hello {
+
+    margin-top: 50px;
+    width: $maxw;
+    display: flex;
+    justify-content: space-between;
+    
+    @media (max-width : $dw){
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__pictureDiv {
+        flex: 0 0 250px;
+        height: 250px;
+        border-radius: 125px;
+        background-image: url(./mainPic.jpg);
+        background-size: cover;
+        margin: 0px 25px;
+        box-shadow: 0 0px 9px 0 rgb(151 151 151 / 94%);
+     
+        @media (max-width : $dw) {
+            width: 250px;
+        }
+    }
+
+    
+    
+    p {
+        padding: 10px 40px 0px 10px;
+        margin: 15px 20px 0px 0px;
+        @media  (max-width: $dw) {
+            text-align: center;
+            padding: 10px 10px 0px 10px;
+            margin: 10px 0px 10px 0px;
+            
+        }
+    }
+}
+.bigText {
+    font-size: 35px;
+    font-weight: 700;
+    
+ } 
+
+ .ordinaryText {
+    font-size: 22px; 
+    font-weight: 300;
+    
+ }

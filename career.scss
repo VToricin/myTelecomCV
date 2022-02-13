@@ -1,0 +1,117 @@
+.careerMainDiv {
+    width: $maxw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+    height: auto;
+    background-color: $careerElementColor;
+    border-radius: 30px;
+    box-shadow: 0 0px 9px 0 rgb(151 151 151 / 14%);
+
+    @media (max-width: $dw) {
+        width: 95%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .companyInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0px 10px;
+        width: 30%;
+    }
+    #companyName {
+        font-size: 35px;
+
+    }
+    #companyWebsite {
+        font-size: 25px;
+        a {
+            text-decoration: none;
+        }
+    }
+    #positionDecriptionDiv {
+        background-color: whitesmoke;
+        border-radius: 22px;
+        height: auto;
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+        transition: ease 200ms;
+        padding: 0px 0px 5px 0px;
+        
+        margin: 0px 15px 0px 0px;
+
+        @media (max-width : $dw) {
+           width: 95%;
+           margin: 10px 0px;    
+           height: auto;
+        }
+
+        #positionDuties {
+           display: flex;
+           transition: 300ms ease;
+           align-items: center;
+           margin: 0px 15px 0px 0px;
+           
+
+           
+           
+           
+        }
+        .positionName {
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            padding: 5px 10px;
+            
+        }
+
+        .switch_button {
+            position: absolute;
+            top: 46%;
+            width: 20px;
+            height: 30px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 0px 5px 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: ease 200ms;
+            font-family: monospace;
+            
+        }
+    
+
+        .switch_button:hover {
+            background-color: $careerElementColor;
+            transition: ease 200ms;
+            @media (max-width : $dw) {
+                
+                    background-color: white;
+                }
+
+        }
+        #next {
+            right: 0px;
+            border-radius: 5px 0px 0px 5px;
+        }
+
+    }
+}
+.sliderElement {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    
+
+    p {
+     padding: 0px 20px;
+     text-align: center;
+     margin: 5px 0px;
+ }
+}

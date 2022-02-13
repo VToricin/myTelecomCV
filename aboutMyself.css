@@ -1,0 +1,8 @@
+#projectPicture {
+  width: 245px;
+  height: 225px;
+  background-image: url(./screenWeather.jpg);
+  background-size: contain;
+  border-radius: 25px;
+  box-shadow: 0 0px 9px 0 rgba(135, 134, 134, 0.2);
+}/*# sourceMappingURL=aboutMyself.css.map */

@@ -1,0 +1,38 @@
+
+#mainDivInAboutMyselfBlock{
+    width: $maxw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    @media (max-width : $dw) {
+        flex-direction: column-reverse;
+    }
+}
+#projectPicture {
+    width: 250px;
+    height: 250px;
+    background-image: url(./screenWeather.jpg);
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 0px 3px 0 rgb(135 134 134 / 10%);
+    transition: 300ms ease;
+    @media (max-width : $dw) {
+        margin-top: 20px;
+        box-shadow: 0 1px 6px 0 rgb(135 134 134 / 30%);
+    }      
+}
+#projectPicture:hover {
+    box-shadow: 0 1px 6px 0 rgb(135 134 134 / 30%);
+    transition: 300ms ease;
+}
+#aboutMyselfDiv {
+    .bigText , .ordinaryText {
+        text-align: right;
+        margin: 10px 10px 0px 40px; 
+        @media (max-width : $dw) {
+           margin: 10px 10px;
+           text-align: center;
+        }
+    }
+    
+}

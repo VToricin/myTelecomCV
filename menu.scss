@@ -1,0 +1,32 @@
+.menu {
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        color: black;
+        padding: 0px;
+
+        @media (max-width: $dw) {
+            justify-content: space-around;
+        } 
+
+        li{
+            margin: 0px 10px 0px 30px;
+            list-style-type: none;
+            @media (max-width : $dw){
+                margin : 0px 10px;
+            }
+            
+        }
+        a {
+            text-decoration: none;
+            color: black;
+
+            
+        }
+    
+    }
+}
