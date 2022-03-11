@@ -189,9 +189,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 10px 0px;
 }
 @media (max-width: 770px) {
   #mainDivInAboutMyselfBlock {
+    width: 100%;
     flex-direction: column-reverse;
   }
 }
@@ -212,11 +214,35 @@
   }
 }
 
+#projectPicture2 {
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 0px 3px 0 rgba(135, 134, 134, 0.1);
+  transition: 300ms ease;
+  background-color: white;
+  background-image: url(./vavSmall.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 770px) {
+  #projectPicture2 {
+    margin-top: 20px;
+    box-shadow: 0 1px 6px 0 rgba(135, 134, 134, 0.3);
+  }
+}
+
 #projectPicture:hover {
   box-shadow: 0 1px 6px 0 rgba(135, 134, 134, 0.3);
   transition: 300ms ease;
 }
 
+@media (max-width: 770px) {
+  #aboutMyselfDiv {
+    width: 100%;
+  }
+}
 #aboutMyselfDiv .bigText, #aboutMyselfDiv .ordinaryText {
   text-align: right;
   margin: 10px 10px 0px 40px;
@@ -330,6 +356,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .footerDiv {

@@ -4,7 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around; 
+    margin: 10px 0px;
     @media (max-width : $dw) {
+        width: 100%;
         flex-direction: column-reverse;
     }
 }
@@ -21,11 +23,35 @@
         box-shadow: 0 1px 6px 0 rgb(135 134 134 / 30%);
     }      
 }
+#projectPicture2 {
+    width: 250px;
+    height: 250px;
+    
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 0px 3px 0 rgb(135 134 134 / 10%);
+    transition: 300ms ease;
+    background-color: white;
+    background-image: url(./vavSmall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    @media (max-width : $dw) {
+        margin-top: 20px;
+        box-shadow: 0 1px 6px 0 rgb(135 134 134 / 30%);
+    }      
+}
+
 #projectPicture:hover {
     box-shadow: 0 1px 6px 0 rgb(135 134 134 / 30%);
     transition: 300ms ease;
 }
 #aboutMyselfDiv {
+    @media (max-width:$dw) {
+        width: 100%;
+    }
+
     .bigText , .ordinaryText {
         text-align: right;
         margin: 10px 10px 0px 40px; 
