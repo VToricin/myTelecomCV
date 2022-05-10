@@ -184,15 +184,29 @@
   margin: 5px 0px;
 }
 
-#mainDivInAboutMyselfBlock {
+.mainDivInAboutMyselfBlock {
   width: 1024px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 10px 0px;
 }
 @media (max-width: 770px) {
-  #mainDivInAboutMyselfBlock {
+  .mainDivInAboutMyselfBlock {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}
+
+.reverseClass {
+  flex-direction: row-reverse;
+}
+.reverseClass .aboutMyselfDiv .bigText, .reverseClass .aboutMyselfDiv .ordinaryText {
+  text-align: left;
+  margin: 10px 40px 0px 10px;
+}
+@media (max-width: 770px) {
+  .reverseClass {
     width: 100%;
     flex-direction: column-reverse;
   }
@@ -201,10 +215,13 @@
 .projectPicture {
   width: 250px;
   height: 250px;
+  background-color: white;
   background-size: contain;
   border-radius: 50%;
   box-shadow: 0 0px 3px 0 rgba(135, 134, 134, 0.1);
   transition: 300ms ease;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media (max-width: 770px) {
   .projectPicture {
@@ -214,7 +231,7 @@
 }
 
 .projectPicture:hover {
-  box-shadow: 0 1px 6px 0 rgba(135, 134, 134, 0.3);
+  box-shadow: 0 3px 11px 0 rgba(135, 134, 134, 0.3);
   transition: 300ms ease;
 }
 
@@ -223,23 +240,26 @@
 }
 
 #projectPicture2 {
-  background-color: white;
   background-image: url(./vavSmall.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.aboutMyselfDiv {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 770px) {
-  #aboutMyselfDiv {
+  .aboutMyselfDiv {
     width: 100%;
   }
 }
-#aboutMyselfDiv .bigText, #aboutMyselfDiv .ordinaryText {
+.aboutMyselfDiv .bigText, .aboutMyselfDiv .ordinaryText {
   text-align: right;
   margin: 10px 10px 0px 40px;
 }
 @media (max-width: 770px) {
-  #aboutMyselfDiv .bigText, #aboutMyselfDiv .ordinaryText {
+  .aboutMyselfDiv .bigText, .aboutMyselfDiv .ordinaryText {
     margin: 10px 10px;
     text-align: center;
   }
@@ -271,8 +291,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   background-color: #f5f5f5;
-  color: #505050;
-  font-family: "Comfortaa", cursive;
+  color: rgb(80, 80, 80);
   font-family: "Open Sans Condensed", sans-serif;
 }
 

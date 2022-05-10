@@ -23,6 +23,26 @@ let profession = {
     
 }
 
+let allProjectsObject = {
+    'eKors':{
+        'description':["О себе","Несмотря на большой опыт в сфере телекоммуникаций, хочу перейти в web-разработку. Последние полгода изучаю технологии frontend-программирования. Успел познакомиться с основами адаптивной верстки HTML страниц с помощью CSS, SCSS. Добавлением на страницы интерактивных элементов средставми Javascript. Изучаю React. Создал эту страницу и небольшой интернет-магазин детских головных уборов."],
+        'imageSource': "url(./images/ekors.jpg)",
+        'projectLink': "https://whiitered.github.io/eKors/"
+
+    },
+    'justWeather':{
+        'description':["Pet-проект - сайт с прогнозами погоды, для него использовал открытые API с openweather"],
+        'imageSource': "url(./images/screenWeather.jpg)",
+        'projectLink': "https://whiitered.github.io/justWeather/"
+    },
+    'isRipe':{
+        'description':["А еще?", "Небольшой лендинг для приложения isRipe. Приложение еще в разработке, а лендинг доступен по ссылке под картинкой с авокадо. Наверняка в этом списке появится что-нибудь еще, так как учиться в области frontend разработки можно бесконечно :) "],
+        'imageSource': "url(./images/vavSmall.jpg)",
+        'projectLink': "https://isripe.avaplex.rocks/"
+    }
+
+}
+
 let companyName = document.getElementById('companyName');
 let companyWebSite = document.getElementById('companyWebsite');
 let positionDescriptionDiv = document.getElementById('positionDescriptionDiv');
@@ -33,6 +53,7 @@ let posPickCount = 1;
 let nextButton = document.getElementById('next');
 let previousButton = document.getElementById('previous');
 let posPick = Object.keys(profession['TTK'].positions);
+let aboutMyself = document.querySelector('.aboutMyself');
 
 function previousCareer () {
     let compNameArray = Object.keys(profession);
@@ -107,3 +128,54 @@ previousButton.addEventListener('click', function () {
 
 
 previousCareer();
+
+
+function aboutMyselfBuilder(){
+    Object.keys(allProjectsObject).map(el=>{
+        let mainDivInAboutMyselfBlock = document.createElement('div');
+        mainDivInAboutMyselfBlock.classList.add("mainDivInAboutMyselfBlock");
+            if ((Object.keys(allProjectsObject).indexOf(el)+1)%2===0){
+            mainDivInAboutMyselfBlock.classList.add("reverseClass");
+            }
+        aboutMyself.appendChild(mainDivInAboutMyselfBlock);
+
+            let imageLink = document.createElement('a');
+            mainDivInAboutMyselfBlock.appendChild(imageLink);
+            imageLink.href = allProjectsObject[el].projectLink;
+
+            let projectImageDiv = document.createElement('div');
+            imageLink.appendChild(projectImageDiv);
+            projectImageDiv.classList.add('projectPicture');
+            projectImageDiv.style.backgroundImage = allProjectsObject[el].imageSource;
+
+            let aboutMyselfDiv = document.createElement('div');
+            aboutMyselfDiv.classList.add('aboutMyselfDiv');
+            mainDivInAboutMyselfBlock.appendChild(aboutMyselfDiv);
+
+            if (allProjectsObject[el].description.length>1){
+                let bigText = document.createElement('p');
+                bigText.classList.add('bigText');
+                aboutMyselfDiv.appendChild(bigText);
+                bigText.innerHTML = allProjectsObject[el].description[0];
+
+                for (let i=1; i<allProjectsObject[el].description.length; i++){
+                    let ordinaryText = document.createElement('p');
+                    ordinaryText.classList.add('ordinaryText');
+                    ordinaryText.innerHTML = allProjectsObject[el].description[i];
+                    aboutMyselfDiv.appendChild(ordinaryText);
+                    
+                }
+            }else{
+                let ordinaryText = document.createElement('p');
+                    ordinaryText.classList.add('ordinaryText');
+                    ordinaryText.innerHTML = allProjectsObject[el].description[0];
+                    aboutMyselfDiv.appendChild(ordinaryText);
+            }
+            
+
+
+
+
+    }) ;  
+}
+aboutMyselfBuilder();
