@@ -9,14 +9,14 @@
         color: black;
         padding: 0px;
 
-        @media (max-width: $dw) {
+        @media (max-width: $maxw) {
             justify-content: space-around;
         } 
 
         li{
             margin: 0px 10px 0px 30px;
             list-style-type: none;
-            @media (max-width : $dw){
+            @media (max-width : $maxw){
                 margin : 0px 10px;
             }
             

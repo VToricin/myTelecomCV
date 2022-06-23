@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .hello {
     width: 100%;
     display: flex;
@@ -22,7 +22,7 @@
   margin: 0px 25px;
   box-shadow: 0 0px 9px 0 rgba(151, 151, 151, 0.94);
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .hello__pictureDiv {
     width: 250px;
   }
@@ -31,7 +31,7 @@
   padding: 10px 40px 0px 10px;
   margin: 15px 20px 0px 0px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .hello p {
     text-align: center;
     padding: 10px 10px 0px 10px;
@@ -61,7 +61,7 @@
   color: black;
   padding: 0px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .menu__list {
     justify-content: space-around;
   }
@@ -70,7 +70,7 @@
   margin: 0px 10px 0px 30px;
   list-style-type: none;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .menu__list li {
     margin: 0px 10px;
   }
@@ -81,7 +81,7 @@
 }
 
 .careerMainDiv {
-  width: 1024px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,7 +91,7 @@
   border-radius: 30px;
   box-shadow: 0 0px 9px 0 rgba(151, 151, 151, 0.14);
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .careerMainDiv {
     width: 95%;
     flex-direction: column;
@@ -126,7 +126,7 @@
   padding: 0px 0px 5px 0px;
   margin: 0px 15px 0px 0px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .careerMainDiv #positionDecriptionDiv {
     width: 95%;
     margin: 10px 0px;
@@ -163,7 +163,7 @@
   background-color: white;
   transition: ease 200ms;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .careerMainDiv #positionDecriptionDiv .switch_button:hover {
     background-color: white;
   }
@@ -185,13 +185,13 @@
 }
 
 .mainDivInAboutMyselfBlock {
-  width: 1024px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10px 0px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .mainDivInAboutMyselfBlock {
     width: 100%;
     flex-direction: column-reverse;
@@ -205,13 +205,13 @@
   text-align: left;
   margin: 10px 40px 0px 10px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .reverseClass .aboutMyselfDiv .bigText, .reverseClass .aboutMyselfDiv .ordinaryText {
     margin: 10px 10px;
     text-align: center;
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .reverseClass {
     width: 100%;
     flex-direction: column-reverse;
@@ -229,7 +229,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .projectPicture {
     margin-top: 20px;
     box-shadow: 0 1px 6px 0 rgba(135, 134, 134, 0.3);
@@ -255,7 +255,7 @@
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .aboutMyselfDiv {
     width: 100%;
   }
@@ -264,7 +264,7 @@
   text-align: right;
   margin: 10px 10px 0px 40px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .aboutMyselfDiv .bigText, .aboutMyselfDiv .ordinaryText {
     margin: 10px 10px;
     text-align: center;
@@ -272,7 +272,7 @@
 }
 
 #mainFooterDiv {
-  width: 1024px;
+  width: 100%;
   height: 150px;
   background-color: white;
   border-radius: 30px 30px 0px 0px;
@@ -284,32 +284,31 @@
 #mainFooterDiv p {
   text-align: center;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   #mainFooterDiv {
     border-radius: 30px 30px 0px 0px;
   }
 }
 
 body {
-  margin: 0px;
-  width: 100%;
+  margin: 0px auto;
+  width: 1024px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   background-color: #f5f5f5;
   color: rgb(80, 80, 80);
   font-family: "Open Sans Condensed", sans-serif;
 }
-
-header {
-  width: 1024px;
-  height: 80px;
-  display: flex;
-  align-items: center;
+@media (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
 }
 
 #headerMainDiv {
   width: 100%;
+  height: 80px;
 }
 
 .menu {
@@ -324,7 +323,7 @@ header {
   color: black;
   padding: 0px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .menu__list {
     justify-content: space-around;
   }
@@ -333,7 +332,7 @@ header {
   margin: 0px 10px 0px 30px;
   list-style-type: none;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .menu__list li {
     margin: 0px 10px;
   }
@@ -348,7 +347,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .career {
@@ -359,7 +358,7 @@ header {
   justify-content: center;
   height: auto;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .career {
     height: auto;
     padding: 10px 0px;
@@ -382,8 +381,14 @@ header {
   justify-content: center;
   margin-top: 30px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .footerDiv {
     width: 97%;
   }
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */

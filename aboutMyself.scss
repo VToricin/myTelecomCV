@@ -1,11 +1,11 @@
 
 .mainDivInAboutMyselfBlock{
-    width: $maxw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between; 
     margin: 10px 0px;
-    @media (max-width : $dw) {
+    @media (max-width : $maxw) {
         width: 100%;
         flex-direction: column-reverse;
     }
@@ -19,14 +19,14 @@
         .bigText , .ordinaryText {
             text-align: left;
             margin: 10px 40px 0px 10px; 
-            @media (max-width : $dw) {
+            @media (max-width : $maxw) {
                 margin: 10px 10px;
                 text-align: center;
              }
         }
     }
 
-    @media (max-width : $dw) {
+    @media (max-width : $maxw) {
         width: 100%;
         flex-direction: column-reverse;
     }
@@ -44,7 +44,7 @@
     background-position: center;
     
 
-    @media (max-width : $dw) {
+    @media (max-width : $maxw) {
         margin-top: 20px;
         box-shadow: 0 1px 6px 0 rgb(135 134 134 / 30%);
     }      
@@ -72,14 +72,14 @@
 .aboutMyselfDiv {
     display: flex;
     flex-direction: column;
-    @media (max-width:$dw) {
+    @media (max-width:$maxw) {
         width: 100%;
     }
 
     .bigText , .ordinaryText {
         text-align: right;
         margin: 10px 10px 0px 40px; 
-        @media (max-width : $dw) {
+        @media (max-width : $maxw) {
            margin: 10px 10px;
            text-align: center;
         }

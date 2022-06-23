@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     
-    @media (max-width : $dw){
+    @media (max-width : $maxw){
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
@@ -22,7 +22,7 @@
         margin: 0px 25px;
         box-shadow: 0 0px 9px 0 rgb(151 151 151 / 94%);
      
-        @media (max-width : $dw) {
+        @media (max-width : $maxw) {
             width: 250px;
         }
     }
@@ -32,7 +32,7 @@
     p {
         padding: 10px 40px 0px 10px;
         margin: 15px 20px 0px 0px;
-        @media  (max-width: $dw) {
+        @media  (max-width: $maxw) {
             text-align: center;
             padding: 10px 10px 0px 10px;
             margin: 10px 0px 10px 0px;

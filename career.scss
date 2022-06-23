@@ -1,5 +1,5 @@
 .careerMainDiv {
-    width: $maxw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,7 +9,7 @@
     border-radius: 30px;
     box-shadow: 0 0px 9px 0 rgb(151 151 151 / 14%);
 
-    @media (max-width: $dw) {
+    @media (max-width: $maxw) {
         width: 95%;
         flex-direction: column;
         height: auto;
@@ -45,7 +45,7 @@
         
         margin: 0px 15px 0px 0px;
 
-        @media (max-width : $dw) {
+        @media (max-width : $maxw) {
            width: 95%;
            margin: 10px 0px;    
            height: auto;
@@ -90,7 +90,7 @@
         .switch_button:hover {
             background-color: $careerElementColor;
             transition: ease 200ms;
-            @media (max-width : $dw) {
+            @media (max-width : $maxw) {
                 
                     background-color: white;
                 }
