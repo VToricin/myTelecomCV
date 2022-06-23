@@ -86,6 +86,7 @@ body {
     @media (max-width : $maxw) {
         height: auto;
         padding: 10px 0px;
+        flex-direction: column;
     }
 
     
