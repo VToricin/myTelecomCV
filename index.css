@@ -289,6 +289,32 @@ html {
   text-align: center;
 }
 
+.scrollbackbutton {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  z-index: 12;
+  bottom: 100px;
+  left: 50px;
+  box-shadow: 0 1px 6px 0 rgba(135, 134, 134, 0.3);
+  background-image: url(./scrollback/2toparrow.png);
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 1024px) {
+  .scrollbackbutton {
+    width: 45px;
+    height: 45px;
+    right: 0px;
+    top: auto;
+    left: auto;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: 0 1px 6px 0 rgba(135, 134, 134, 0.2);
+  }
+}
+
 body {
   margin: 0px auto;
   width: 1024px;
