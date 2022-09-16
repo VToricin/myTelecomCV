@@ -34,9 +34,9 @@ let allProjectsObject = {
 
     },
     'justWeather':{
-        'description':["Pet-проект - сайт с прогнозами погоды, для него использовал открытые API с openweather, где познакомился с Fetch запросами"],
-        'imageSource': "url(./images/screenWeather.jpg)",
-        'projectLink': "https://whiitered.github.io/justWeather/"
+        'description':["Pet-проект - React приложение с прогнозами погоды, для него использовал открытые API с openweather, познакомился с Fetch запросами "],
+        'imageSource': "url(./images/screenWeather.png)",
+        'projectLink': "https://whiitered.github.io/reactJustWeather/"
     },
     'isRipe':{
         'description':["А еще?", "Небольшой лендинг для приложения isRipe. Приложение еще в разработке, а лендинг доступен по ссылке под картинкой с авокадо. Совершенно точно в этом списке появится что-нибудь еще, так как учиться в области frontend разработки можно бесконечно :) "],
