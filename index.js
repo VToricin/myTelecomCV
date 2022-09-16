@@ -34,7 +34,7 @@ let allProjectsObject = {
 
     },
     'justWeather':{
-        'description':["Pet-проект - React приложение с прогнозами погоды, для него использовал открытые API с openweather, познакомился с Fetch запросами "],
+        'description':["React приложение с прогнозами погоды, построеное на переиспользуемых компонентах, для него использовал открытые API с openweather, познакомился с Fetch запросами. Поработал над адаптивностью для мобильных устройств. "],
         'imageSource': "url(./images/screenWeather.png)",
         'projectLink': "https://whiitered.github.io/reactJustWeather/"
     },
