@@ -36,7 +36,7 @@ let allProjectsObject = {
     'justWeather':{
         'description':["React приложение с прогнозами погоды, построеное на переиспользуемых компонентах, для него использовал открытые API с openweather, познакомился с Fetch запросами. Поработал над адаптивностью для мобильных устройств. "],
         'imageSource': "url(./images/screenWeather.png)",
-        'projectLink': "https://whiitered.github.io/reactJustWeather/"
+        'projectLink': "https://whiitered.store"
     },
     'isRipe':{
         'description':["А еще?", "Небольшой лендинг для приложения isRipe. Приложение еще в разработке, а лендинг доступен по ссылке под картинкой с авокадо. Совершенно точно в этом списке появится что-нибудь еще, так как учиться в области frontend разработки можно бесконечно :) "],
