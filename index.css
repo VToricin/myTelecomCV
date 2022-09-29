@@ -193,12 +193,16 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column-reverse;
+  height: 491px;
   margin: 10px 0px;
 }
 @media (max-width: 1024px) {
   .mainDivInAboutMyselfBlock {
     width: 100%;
-    flex-direction: column-reverse;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 
@@ -206,8 +210,8 @@ html {
   flex-direction: row-reverse;
 }
 .reverseClass .aboutMyselfDiv .bigText, .reverseClass .aboutMyselfDiv .ordinaryText {
-  text-align: left;
-  margin: 10px 40px 0px 10px;
+  text-align: center;
+  margin: 10px;
 }
 @media (max-width: 1024px) {
   .reverseClass .aboutMyselfDiv .bigText, .reverseClass .aboutMyselfDiv .ordinaryText {
@@ -265,13 +269,40 @@ html {
   }
 }
 .aboutMyselfDiv .bigText, .aboutMyselfDiv .ordinaryText {
-  text-align: right;
-  margin: 10px 10px 0px 40px;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  color: black;
 }
 @media (max-width: 1024px) {
   .aboutMyselfDiv .bigText, .aboutMyselfDiv .ordinaryText {
     margin: 10px 10px;
     text-align: center;
+  }
+}
+
+.mainParagraphAboutMyself {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 22px;
+  margin: 10px 0px;
+}
+@media (max-width: 768px) {
+  .mainParagraphAboutMyself {
+    margin: 10px;
+    padding: 5px;
+  }
+}
+
+.petProjectsParentBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .petProjectsParentBlock {
+    flex-direction: column;
   }
 }
 
