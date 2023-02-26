@@ -194,13 +194,12 @@ html {
   align-items: center;
   justify-content: space-between;
   flex-direction: column-reverse;
-  height: 491px;
+  height: 441px;
   margin: 10px 0px;
 }
 @media (max-width: 1024px) {
   .mainDivInAboutMyselfBlock {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -297,13 +296,26 @@ html {
 .petProjectsParentBlock {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 @media (max-width: 768px) {
   .petProjectsParentBlock {
     flex-direction: column;
   }
+}
+
+.skillsNameContainer {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .theBlock {
+    width: 95%;
+  }
+}
+
+.newSkill {
+  font-size: 22px;
 }
 
 #mainFooterDiv {

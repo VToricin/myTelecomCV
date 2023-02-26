@@ -32,11 +32,13 @@ let profession = {
 }
 
 let aboutMySelfParagraph = [
-'После окончания университета в 2009г, начал свою карьеру в телекоме, устроившись в компанию ТрансТелеКом, на позицию электромеханика ВОЛС в аварийно-восстановительную бригаду. Научился работать со всеми видами ВОК, проводить измерения линии и анализировать рефлектограммы.',
-'Спустя полтора года, был переведен на позицию инженера и получил в ответственность всю ВОЛС-инфраструктуру компании в г. Ярославль и близлежащих городах области. Создал схемы кроссовых соединений для всех узлов в своей зоне ответственности используя пакет Microsoft Visio, а так же подготовил схемы прокладки ВОК согласно стандартов компании.',
+'После окончания университета в 2009г, начал свою карьеру, устроившись в компанию ТрансТелеКом, на позицию электромеханика ВОЛС в аварийно-восстановительную бригаду. Научился работать со всеми видами ВОК, проводить измерения и анализировать рефлектограммы.',
+'Спустя полтора года, был переведен на позицию инженера и получил в ответственность всю ВОЛС-инфраструктуру компании в г. Ярославль и близлежащих городах области. Создал схемы кроссовых соединений для всех узлов в своей зоне ответственности, а так же подготовил схемы прокладки ВОК согласно стандартов компании.',
 'В 2015 году был приглашен в Центр технической эксплуатации сетей компании, группу эксплуатации ВОЛС. И в обязанности группы входила уже экспертная работа на территории всей западной части страны. Проведена работа с регионами и выполнена ревизия загруженности всех ВОЛС компании.',
-'Во второй половине 2016 года был приглашен в центр управления сетями компании, на позицию ведущего специалиста. В обязанности входил мониторинг всех систем синхронний иерархии и систем передачи данных лсо спектральным уплотнением на территории всей страны. Решение инцидентов и неисправностей на сетях, координация и руководство аварийных бригад. Решение проблем в том числе с иностранными партнерами.',
-'В свободное время изучаю технологии web-разработки, создал несколько сайтов:'
+'Во второй половине 2016 года был приглашен в центр управления сетями компании, на позицию ведущего специалиста. В обязанности входил мониторинг всех систем синхронний иерархии и систем передачи данных со спектральным уплотнением на территории всей страны. Решение инцидентов и неисправностей на сетях, координация и руководство аварийных бригад. Решение проблем в том числе с иностранными партнерами.',
+
+'<b>В свободное время изучаю технологии автотестирования и web-разработки, приобрел навыки:</b>',
+
 
 
 ];
@@ -59,6 +61,11 @@ let allProjectsObject = {
         'projectLink': "https://isripe.avaplex.rocks/"
     } */
 
+}
+
+let skillsObject = {
+    "Навыки автотестирования" : ["Базовые навыки Python", "Навыки работы с библиотекой Pytest", "Навыки создания кейсов работы пользователя с Selenium webdriver", "Знание принципов построения модели DOM"],
+    "Навыки frontend разработки" : ["Знание языка разметки HTML и принципов построения DOM", "Работа с таблицами стилей CSS и знание препроцессора SCSS", "Адаптивная верстка для разных типов устройств", "Знание JS: функции, классы, модули, асинхронные функции", "Навыки работы с фреймворком React JS"]
 }
 
 let companyName = document.getElementById('companyName');
@@ -158,8 +165,57 @@ function aboutMyselfBuilder(){
     }    
     )
     let petProjectsParentBlock = document.createElement('div');
+
+    let skillsBlock = document.createElement('div');
+    skillsBlock.classList.add('petProjectsParentBlock');
+    aboutMyself.appendChild(skillsBlock);
+
+    
+    
+    
+    Object.keys(skillsObject).forEach(elem => {
+
+        let theBlock = document.createElement('div');
+        theBlock.classList.add("theBlock");
+        
+        let theBlockName = document.createElement('p');
+
+        let theBlockNameContainer = document.createElement('div');
+        theBlockNameContainer.classList.add("skillsNameContainer");
+        
+
+        theBlockName.innerHTML = `${elem}`;
+        theBlockName.classList.add("bigText");
+        theBlockNameContainer.appendChild(theBlockName);
+        let skillsList = document.createElement('ul');
+        skillsBlock.appendChild(theBlock);
+
+        theBlock.appendChild(theBlockNameContainer);
+        theBlock.appendChild(skillsList);
+
+        skillsObject[elem].forEach( el => {
+            let newSkill = document.createElement('li');
+            newSkill.innerHTML = `${el}`;
+            newSkill.classList.add("newSkill")
+            skillsList.appendChild(newSkill)
+    
+        })
+
+    })
+
+    let textAboutProjects = "Создал проекты:";
+    let ParagraphAboutProjects = document.createElement('div');
+    aboutMyself.appendChild(ParagraphAboutProjects);
+    ParagraphAboutProjects.innerHTML = `&nbsp; &nbsp; &nbsp;`+`<b>${textAboutProjects}</b>`;
+    ParagraphAboutProjects.classList.add('mainParagraphAboutMyself');
+
+
     aboutMyself.appendChild(petProjectsParentBlock);
     petProjectsParentBlock.classList.add('petProjectsParentBlock');
+
+
+    
+
 
     Object.keys(allProjectsObject).map(el=>{
         let mainDivInAboutMyselfBlock = document.createElement('div');
@@ -193,7 +249,7 @@ function aboutMyselfBuilder(){
                     aboutMyselfDiv.appendChild(ordinaryText);
                     
                 }
-            }else{
+            } else {
                 let ordinaryText = document.createElement('p');
                     ordinaryText.classList.add('ordinaryText');
                     ordinaryText.innerHTML = allProjectsObject[el].description[0];
@@ -205,6 +261,7 @@ function aboutMyselfBuilder(){
 
 
     }) ;  
+
 }
 aboutMyselfBuilder();
 

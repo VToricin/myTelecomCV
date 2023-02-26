@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between; 
     flex-direction: column-reverse;
-    height: 491px;
+    height: 441px;
     margin: 10px 0px;
     @media (max-width : $maxw) {
         width: 100%;
@@ -109,11 +109,25 @@
 .petProjectsParentBlock{
     width: 100%;
     display: flex;
-    align-items: center;
+    
     justify-content: space-around;
      @media (max-width:768px) {
         flex-direction: column;
 
      }
 
+}
+
+.skillsNameContainer{
+    margin-left: 15px;
+
+}
+.theBlock{
+    @media (max-width:768px) {
+        width: 95%;
+    }
+}
+
+.newSkill{
+    font-size: 22px;
 }
